@@ -1,0 +1,106 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    font-size: 25.5pt;
+}
+
+h1 {
+    background-color: black;
+    font-size: 4em;
+    letter-spacing: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    opacity: 0.85;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #111;
+}
+
+article {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 40px 15%;
+    text-align: justify;
+    position: relative;
+    box-shadow: 20px 20px 30px black;
+}
+
+article:nth-of-type(2n+1) {
+    background-color: white;
+    color: black;
+}
+
+article:nth-of-type(2n) {
+    background-color: #7b7b7b;
+    color: white;
+}
+
+.img1, .bgimg {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img1 {
+    height: 100%;
+    opacity: 0.65;
+}
+
+.bgimg {
+    min-height: 400px;
+    width: 100%;
+}
+
+video {
+    position: relative;
+    width: 100%;
+    /* enlever espace sous la vidéo */
+    display: block;
+}
+
+#bande_home {
+    background-color: #d7d7d7;
+    /*background-color: #871010;*/
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 10px 30px black;
+}
+
+#bande_home h2 {
+    font-size: 4em;
+    margin-top: -14px;
+    text-align: right;
+    letter-spacing: 0.5em;
+    color: #484747;
+}
+
+
+/*Use a media query to add a breakpoint at 1450px */
+
+@media (max-width:1000px) {
+    #bande_home h2 {
+        visibility: hidden;
+    }
+}

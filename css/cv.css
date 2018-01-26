@@ -1,0 +1,476 @@
+/*Layout*/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: "Roboto";
+}
+
+html {
+    background: #eae8e7;
+    font-size: 1vw;
+}
+
+body {
+    width: 60%;
+}
+
+/*Spécifique au HTML5*/
+
+section, article, aside, footer {
+    display: block;
+}
+
+header {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: 7em;
+}
+
+.content header {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: 7em;
+}
+
+h3, span, .content article p {
+    margin-left: 18%;
+    margin-right: 2%;
+}
+
+hr {
+    border: 1px solid #e4e4e4;
+    width: 82%;
+    margin: 3% 0 3% 18%;
+}
+
+h1 {
+    background: white;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding: 10px 0px;
+}
+
+h3 {
+    color: #989898;
+    font-size: 1vw;
+    line-height: 20pt;
+}
+
+article p {
+    font-weight: 300;
+    font-size: 0.7vw;
+    line-height: 17pt;
+}
+
+aside {
+    float: left;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    width: 25%;
+    min-height: 900px;
+    background-color: #5DA4D9;
+    margin-left: 3.75%;
+}
+
+aside img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+aside p {
+    margin-left: 25%;
+    margin-top: 0;
+}
+
+aside section h2 {
+    float: left;
+}
+
+.content section {
+    float: right;
+    background-color: white;
+    width: 65%;
+    margin-left: 2.5%;
+    margin-bottom: 1.5%;
+    padding-bottom: 2%;
+    margin-right: 3.75%;
+}
+
+.content section h2 {
+    display: inline-block;
+    font-size: 1.5vw;
+    line-height: 37pt;
+    font-weight: 500;
+    color: #767270;
+    padding-bottom: 10px;
+    margin: 0 0 0 8%;
+}
+
+aside section {
+    text-align: left;
+    color: white;
+    width: 100%;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+aside header {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: 4em;
+}
+
+footer {
+    clear: both !important;
+    background: white;
+    text-align: center;
+    width: 92.5%;
+    height: 100px;
+    padding: 10px 35px 10px 10px;
+    color: #200f08;
+    margin-bottom: 40px;
+    margin-left: 3.75%;
+    margin-right: 3.75%;
+}
+
+.description span {
+    text-align: left;
+    margin-left: 20%;
+}
+
+.content span {
+    margin-top: 0px;
+    font-size: 0.8vw;
+    line-height: 15pt;
+    color: #5da4d9;
+}
+
+/* Icones du footer */
+
+ul {
+    font-size: 0.9vw;
+}
+
+ul.icons {
+    cursor: default;
+}
+
+ul.icons li {
+    display: inline-block;
+    line-height: 1em;
+    padding-left: 0.5em;
+}
+
+.mainContainer {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card:hover {
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.name {
+    text-align: center;
+    float: left;
+    display: block;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 2rem;
+    width: 25%;
+    margin-left: 3.75%;
+    margin-bottom: 1%;
+    padding: 1rem 0;
+}
+
+.description {
+    float: left;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    width: 65%;
+    margin-left: 2.5%;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.name, .description {
+    background-color: white;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Grands icones à côté des titres */
+
+.fa-3x .fa-2x {
+    float: left;
+}
+
+.fa-2x {
+    float: left;
+    color: white !important;
+    margin: 5% 0 0 5%;
+    width: 50px;
+}
+
+.fa-3x {
+    margin: 3% 0 0 3%;
+    height: 1em;
+    width: 1em;
+}
+
+.category {
+    font-weight: bold;
+    text-align: end;
+    margin-bottom: -4%;
+    font-size: 1.1em;
+    color: #575757;
+}
+
+.progress {
+    position: relative;
+    display: block;
+    overflow: visible;
+    width: 65%;
+    border-radius: 2px;
+    margin: 0.5rem 0 1rem 3.5rem;
+    background-color: #4783c2;
+    height: 2px;
+}
+
+.determinate {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+}
+
+/* petits cercles des progress bar dans le aside */
+
+.determinate .fa {
+    color: white !important;
+    position: absolute;
+    font-size: 1vw;
+    right: 0px;
+    margin-left: 50%;
+    line-height: 1px;
+}
+
+.lang {
+    color: white;
+    margin-top: 10%;
+}
+
+.small {
+    color: white;
+    font-weight: 300;
+    font-size: 0.8vw;
+    line-height: 17pt;
+    margin-top: -10%;
+}
+
+/* Icones du footer */
+
+.icon.circle {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    border-radius: 100%;
+    font-size: 1.25em;
+    height: 2.25em;
+    left: 0;
+    line-height: 2.25em;
+    top: 0;
+    width: 2.25em;
+}
+
+.icon {
+    text-decoration: none;
+    position: relative;
+}
+
+.icon.circle:hover {
+    top: -0.1em;
+}
+
+.icon.circle.fa-github, .icon.circle.fa-linkedin, .icon.circle.fa-globe {
+    background: #393939;
+    color: #fff;
+}
+
+.icon.circle.fa-github:hover, .icon.circle.fa-linkedin:hover, .icon.circle.fa-globe:hover {
+    background: #6f6f6f;
+}
+
+.fa {
+    font-size: 50px;
+    color: #999;
+}
+
+/* Animation des sections */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+                transform: none;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+                transform: none;
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+}
+
+.name, .description {
+    overflow: hidden;
+    -webkit-animation-duration: 1.7s;
+            animation-duration: 1.7s;
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+}
+
+.section1 {
+    overflow: hidden;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+}
+
+.section2 {
+    overflow: hidden;
+    -webkit-animation-duration: 1.25s;
+            animation-duration: 1.25s;
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+}
+
+.section3 {
+    overflow: hidden;
+    -webkit-animation-duration: 1.75s;
+            animation-duration: 1.75s;
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+}
+
+.section4 {
+    overflow: hidden;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+}
+
+aside {
+    overflow: hidden;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+}
+
+/*Use a media query to add a breakpoint at 1450px */
+
+@media (max-width:1450px) {
+    .content {
+        width: 100%;
+        /*The width is 100%, when the viewport is 800px or smaller*/
+        margin: 5% !important;
+    }
+    aside, .name {
+        width: 65%;
+        margin: 0 7.5% 0 7.5% !important;
+    }
+}

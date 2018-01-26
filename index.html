@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title> Choisir ses composants </title>
+  <meta name="author" content="Gabriel Cretin et Sophie Lematre" />
+  <meta charset="utf-8" />
+
+  <!-- CSS -->
+  <!-- Pour la police -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <!-- Pour les icônes en bas de la page -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/menu_footer.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src='js/projet.js'></script>
+</head>
+
+<body>
+  <header>
+    <nav id="sideNav">
+      <p> Composants </p>
+      <a href="cpu.html">CPU</a>
+      <a href="gpu.html">Carte Graphique</a>
+      <a href="hd.html">Disque Dur</a>
+      <a href="ram.html">RAM</a>
+      <a href="ecran.html">Écran</a>
+      <a href="carte_mere.html">Carte Mère</a>
+      <p> CV </p>
+      <a href="cv_gabriel.html" class="cv" target="_blank">Gabriel</a>
+      <a href="cv_sophie.html" class="cv" target="_blank">Sophie</a>
+      <br /><br />
+      <a href="questionnaire.html">Donnez votre avis</a>
+    </nav>
+
+    <div class="burger">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
+    <a id="pegasus" class="pegasus" href="./index.html">P E G A S U S</a>
+    <section id="head-page">
+      <div id="title">
+        <h1>Comment choisir les composants de son PC ?</h1>
+      </div>
+    </section>
+    <a id="arrow" href="#next" class="js-scrollTo fa fa-arrow-circle-down"></a>
+  </header>
+
+
+
+  <div id="separator"></div>
+  <div id="main">
+    <div class="wrapper" id="next">
+      <div class="container">
+        <img src="./images/system.jpg" alt="CPU" />
+        <div class="overlay">
+          <p class="text">
+            <a href="./cpu.html"> CPU </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="./images/gpu.jpg" alt="GPU" />
+        <div class="overlay">
+          <p class="text">
+            <a href="./gpu.html"> GPU </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="./images/hd.jpg" alt="Disque dur" />
+        <div class="overlay">
+          <p class="text">
+            <a href="./hd.html"> Disque dur </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="./images/ram.png" alt="RAM" />
+        <div class="overlay">
+          <p class="text">
+            <a href="./ram.html"> RAM </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="./images/screen.jpg" alt="Écran" />
+        <div class="overlay">
+          <p class="text">
+            <a href="./ecran.html"> Écran </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="./images/motherboard.jpg" alt="Carte Mère" />
+        <div class="overlay">
+          <p class="text">
+            <a href="./carte_mere.html"> Carte Mère </a>
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="formulaire">
+      <h2>Prenez contact !</h2>
+      <form action="mailto:gabrielcretin@gmail.com" method="get">
+        <input name="name" placeholder="Nom" type="text" required>
+        <input name="email" placeholder="Email" type="text" pattern="^[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <input name="subject" placeholder="Objet" type="text" required>
+        <textarea name="message" placeholder="Message" rows="7" required></textarea>
+        <input class="special" value="Envoyer" type="submit">
+      </form>
+    </div>
+  </div>
+
+
+  <footer>
+    <ul class="icons">
+      <li><a href="#" class="icon circle fa fa-twitter"></a></li>
+      <li><a href="#" class="icon circle fa fa-facebook"></a></li>
+      <li><a href="#" class="icon circle fa fa-google-plus"></a></li>
+      <li><a href="#" class="icon circle fa fa-github"></a></li>
+    </ul>
+
+    <ul class="copyright">
+      <li>© Pegasus</li>
+      <li>Designé avec ♥ par des gens bien</li>
+    </ul>
+
+  </footer>
+</body>
+
+
+
+</html>

@@ -1,0 +1,234 @@
+/* The side navigation menu */
+
+nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    z-index: 99999;
+}
+
+/* The navigation menu links */
+
+nav a {
+    text-align: justify;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #999;
+    display: block;
+    white-space: nowrap;
+    transition: 0.3s;
+    width: 100%;
+    background-color: black;
+    border: 0;
+}
+
+nav p {
+    text-align: justify;
+    font-size: 25px;
+    font-weight: 900;
+    padding: 8px 8px 0px 32px;
+    color: #23a6c9;
+    display: block;
+    width: 100%;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+nav a:hover {
+    color: white;
+    border: 0;
+    background-color: #999;
+    font-size: 1.75em;
+}
+
+nav .cv:hover {
+    color: white;
+    border: 0;
+    background-color: #23a6c9;
+}
+
+/* Burger */
+
+.bar {
+    display: block;
+    height: 3px;
+    width: 30px;
+    border-radius: 50px;
+    background: black;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    transition: all .7s ease;
+}
+
+.burger {
+    position: fixed;
+    display: inline-block;
+    top: 5px;
+    left: 20px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    z-index: 99999;
+    transition: all .7s ease;
+}
+
+.middle {
+    margin: 0 auto;
+}
+
+.burger:hover .top {
+    transform: translateY(10px) rotateZ(45deg);
+}
+
+.burger:hover .bottom {
+    transform: translateY(-10px) rotateZ(-45deg);
+}
+
+.burger:hover .middle {
+    width: 0;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Redirige vers la page d'accueil */
+
+.pegasus {
+    font-family: 'Open Sans';
+    position: fixed;
+    font-size: 25.5pt;
+    color: black;
+    left: 80px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+footer {
+    background: #1f2329;
+    color: white;
+    padding: 5em;
+    text-align: center;
+}
+
+footer .copyright {
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+ul {
+    margin: 0 0 2em 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+ul.icons {
+    cursor: default;
+}
+
+ul.icons li {
+    display: inline-block;
+    line-height: 1em;
+    padding-left: 0.5em;
+}
+
+ul.copyright li {
+    display: inline-block;
+    line-height: 1em;
+    padding-left: 0.5em;
+    padding-top: 1em;
+}
+
+.icon.circle.fa-twitter {
+    background: #70aecd;
+    color: #fff;
+}
+
+.icon.circle.fa-twitter:hover {
+    background: #7fb7d2;
+}
+
+.icon.circle {
+    transition: all 0.2s ease-in-out;
+    border: 0;
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 1.25em;
+    height: 2.25em;
+    left: 0;
+    line-height: 2.25em;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 2.25em;
+}
+
+.icon {
+    text-decoration: none;
+    position: relative;
+}
+
+.icon.circle:hover {
+    top: -0.2em;
+}
+
+.icon.circle.fa-twitter {
+    background: #70aecd;
+    color: #fff;
+}
+
+.icon.circle.fa-twitter:hover {
+    background: #7fb7d2;
+}
+
+.icon.circle.fa-facebook {
+    background: #7490c3;
+    color: #fff;
+}
+
+.icon.circle.fa-facebook:hover {
+    background: #829bc9;
+}
+
+.icon.circle.fa-google-plus {
+    background: #db6b67;
+    color: #fff;
+}
+
+.icon.circle.fa-google-plus:hover {
+    background: #df7b77;
+}
+
+.icon.circle.fa-github {
+    background: #dcad8b;
+    color: #fff;
+}
+
+.icon.circle.fa-github:hover {
+    background: #e1b89b;
+}
+
+.fa {
+    font-size: 50px;
+    color: #999;
+}
