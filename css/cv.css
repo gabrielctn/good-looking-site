@@ -2,7 +2,7 @@
 
 * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -18,13 +18,18 @@ html {
 }
 
 body {
-    width: 60%;
+    width: 80%;
 }
 
 /*Spécifique au HTML5*/
 
 section, article, aside, footer {
     display: block;
+}
+
+.content .section1 {
+    min-height: 760px;
+    max-height: 1225px;
 }
 
 header {
@@ -42,14 +47,14 @@ header {
 }
 
 h3, span, .content article p {
-    margin-left: 18%;
+    margin-left: 16%;
     margin-right: 2%;
 }
 
 hr {
     border: 1px solid #e4e4e4;
     width: 82%;
-    margin: 3% 0 3% 18%;
+    margin: 4% 0 4% 18%;
 }
 
 h1 {
@@ -62,22 +67,23 @@ h1 {
 
 h3 {
     color: #989898;
-    font-size: 1vw;
+    font-size: 1.2rem;
     line-height: 20pt;
 }
 
 article p {
     font-weight: 300;
-    font-size: 0.7vw;
-    line-height: 17pt;
+    font-size: 1rem;
+    line-height: 20pt;
 }
 
 aside {
     float: left;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     width: 25%;
-    min-height: 900px;
+    min-height: 1159px;
+    max-height: 1225px;
     background-color: #5DA4D9;
     margin-left: 3.75%;
 }
@@ -103,18 +109,17 @@ aside section h2 {
     width: 65%;
     margin-left: 2.5%;
     margin-bottom: 1.5%;
-    padding-bottom: 2%;
-    margin-right: 3.75%;
+    padding-bottom: 4.45%;
 }
 
 .content section h2 {
     display: inline-block;
-    font-size: 1.5vw;
+    font-size: 2rem;
     line-height: 37pt;
     font-weight: 500;
     color: #767270;
     padding-bottom: 10px;
-    margin: 0 0 0 8%;
+    margin: 0 0 0 4%;
 }
 
 aside section {
@@ -154,7 +159,7 @@ footer {
 
 .content span {
     margin-top: 0px;
-    font-size: 0.8vw;
+    font-size: 1rem;
     line-height: 15pt;
     color: #5da4d9;
 }
@@ -162,7 +167,7 @@ footer {
 /* Icones du footer */
 
 ul {
-    font-size: 0.9vw;
+    font-size: 0.9rem;
 }
 
 ul.icons {
@@ -182,14 +187,14 @@ ul.icons li {
 
 .card {
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     -webkit-transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 .card:hover {
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .name {
@@ -218,7 +223,23 @@ ul.icons li {
 .name, .description {
     background-color: white;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.content .section1 {
+    margin-right: 3.75%;
+}
+
+.content .section2, .content .section4 {
+    float: left;
+    margin-left: 3.75%;
+    width: 45%;
+}
+
+.content .section3 {
+    float: right;
+    margin-right: 3.75%;
+    width: 45%;
 }
 
 /* Grands icones à côté des titres */
@@ -243,7 +264,7 @@ ul.icons li {
 .category {
     font-weight: bold;
     text-align: end;
-    margin-bottom: -4%;
+    margin-bottom: -33px;
     font-size: 1.1em;
     color: #575757;
 }
@@ -271,7 +292,7 @@ ul.icons li {
 .determinate .fa {
     color: white !important;
     position: absolute;
-    font-size: 1vw;
+    font-size: 1rem;
     right: 0px;
     margin-left: 50%;
     line-height: 1px;
@@ -285,7 +306,7 @@ ul.icons li {
 .small {
     color: white;
     font-weight: 300;
-    font-size: 0.8vw;
+    font-size: 0.8rem;
     line-height: 17pt;
     margin-top: -10%;
 }
@@ -327,38 +348,36 @@ ul.icons li {
 }
 
 .fa {
-    font-size: 50px;
     color: #999;
 }
 
 /* Animation des sections */
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .fadeInDown {
-  animation-name: fadeInDown;
+    animation-name: fadeInDown;
 }
 
 @-webkit-keyframes fadeInLeft {
     from {
         opacity: 0;
         -webkit-transform: translate3d(-100%, 0, 0);
-                transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
     }
     to {
         opacity: 1;
         -webkit-transform: none;
-                transform: none;
+        transform: none;
     }
 }
 
@@ -366,111 +385,142 @@ ul.icons li {
     from {
         opacity: 0;
         -webkit-transform: translate3d(-100%, 0, 0);
-                transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
     }
     to {
         opacity: 1;
         -webkit-transform: none;
-                transform: none;
+        transform: none;
     }
 }
 
 .fadeInLeft {
     -webkit-animation-name: fadeInLeft;
-            animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
 }
 
 @-webkit-keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
 }
 
 .fadeInRight {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
 }
 
 .name, .description {
     overflow: hidden;
     -webkit-animation-duration: 1.7s;
-            animation-duration: 1.7s;
+    animation-duration: 1.7s;
     -webkit-animation-name: fadeInDown;
-            animation-name: fadeInDown;
+    animation-name: fadeInDown;
 }
 
 .section1 {
     overflow: hidden;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-name: fadeInRight;
-            animation-name: fadeInRight;
+    animation-name: fadeInRight;
 }
 
 .section2 {
     overflow: hidden;
     -webkit-animation-duration: 1.25s;
-            animation-duration: 1.25s;
-    -webkit-animation-name: fadeInRight;
-            animation-name: fadeInRight;
+    animation-duration: 1.25s;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
 }
 
 .section3 {
     overflow: hidden;
     -webkit-animation-duration: 1.75s;
-            animation-duration: 1.75s;
+    animation-duration: 1.75s;
     -webkit-animation-name: fadeInRight;
-            animation-name: fadeInRight;
+    animation-name: fadeInRight;
 }
 
 .section4 {
     overflow: hidden;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-name: fadeInRight;
-            animation-name: fadeInRight;
+    animation-duration: 2s;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
 }
 
 aside {
     overflow: hidden;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-name: fadeInLeft;
-            animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
 }
 
-/*Use a media query to add a breakpoint at 1450px */
+/*Media query pour le côté "responsive" avec un seuil à 1450px */
 
 @media (max-width:1450px) {
-    .content {
+    body {
+        /*Largeur de 100% lorsque le viewport est à 1450px ou moins*/
         width: 100%;
-        /*The width is 100%, when the viewport is 800px or smaller*/
-        margin: 5% !important;
     }
-    aside, .name {
-        width: 65%;
-        margin: 0 7.5% 0 7.5% !important;
+    html {
+        font-size: 3vw;
+    }
+    .content .card, footer, aside {
+        width: 100%;
+        margin: 1.5% 0;
+        float: left;
+    }
+    .name, .description {
+        width: 100%;
+        float: left;
+        margin: 0;
+    }
+    .category {
+        margin-bottom: -24px;
+    }
+    aside{
+        min-height: 900px;
+    }
+    aside section h2 {
+        font-size: 2rem;
+    }
+    aside p {
+        margin-left: 21%;
+    }
+    article p {
+        font-size: 1.6rem;
+    }
+    .small {
+        margin-top: -2%;
+    }
+    .lang {
+        font-size: 1.3rem;
+        margin-left:
+    }
+    .progress {
+        margin-left: 7rem;
     }
 }
