@@ -25,17 +25,6 @@ $(document).ready(function() {
         et donc de ne pas fermer le menu */
         e.stopPropagation();
     })
-
-    // Faire en sorte que le scroll quand on clique sur la
-    // flèche de la 1ere flèche soit "smooth"
-    $('.js-scrollTo').on('click', function() { // Au clic sur la flèche
-        var page = $(this).attr('href'); // Page cible
-        var speed = 1500; // Durée de l'animation (en ms)
-        $('html, body').animate({
-            scrollTop: $(page).offset().top
-        }, speed);
-        return false;
-    });
 });
 
 
@@ -58,9 +47,10 @@ function parallax() {
         uniquement quand on est sur la page index.html car l'élément
         séparateur n'existe que sur cette page */
         var separator = document.getElementById("separator");
-        separator.style.top = (window.pageYOffset / 13) + 'px';
+        separator.style.top = (window.pageYOffset / 7) + 'px';
     }
 }
+
 
 /* Ajoute un détecteur d'événement qui détecte le scroll
  et actionne la fonction parallax */
@@ -84,7 +74,7 @@ function checkAge() {
 
 /* S'assure qu'un sexe a bien été sélectionné */
 function checkSex() {
-    return (document.formulaire.sexe[0].checked || document.formulaire.sexe[1].checked);
+    return (document.formulaire.sexe[0].checked || document.formulaire.sexe[1].checked || document.formulaire.sexe[2].checked);
 }
 
 /* S'assure que le champs connaissance du site soit bien complété */
