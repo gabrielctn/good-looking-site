@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     overflow-x: hidden;
 }
@@ -15,6 +14,7 @@ header {
 }
 
 /* utilisation de important pour signifier que sur cette page le menu et PEGASUS doivent rester en blanc, même le menu fermé */
+
 #pegasus {
     color: white !important;
 }
@@ -29,6 +29,7 @@ header {
 
 /* nécessaire pour créer des niveaux d'index à l'intérieur de cette div
 le titre sera devant l'ombre lumineuse*/
+
 #title {
     width: 100%;
     top: 45%;
@@ -70,6 +71,7 @@ le titre sera devant l'ombre lumineuse*/
 }
 
 /* Les animations de gradient de couleur */
+
 @keyframes animateGlow {
     0% {
         background-position: 0% 50%;
@@ -96,16 +98,18 @@ le titre sera devant l'ombre lumineuse*/
 
 #arrow {
     top: 90%;
-    width: 100%;
-    position: relative;
-    text-align: center;
+    color: white;
+    position: absolute;/* postulat de départ */
+    left: 50%;/* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);/* décalage de 50% de sa propre taille */
+    transition: transform .2s;
+    color: white;
 }
 
 #arrow:hover {
     font-size: 3em;
-    color: #5d5d5d;
-    transition: 0.5s ease-in-out;
-    transform: scale(1.5);
+    transition: 0.2s ease-out;
+    transform: scale(1.1) translate(-45%, -45%);
 }
 
 a {
@@ -124,7 +128,6 @@ a {
     animation: animateGlow 5s ease infinite;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 1);
 }
-
 
 /* Création de la grille */
 
@@ -205,8 +208,6 @@ img {
     border-radius: 2px;
 }
 
-
-
 /* Formulaire */
 
 .formulaire {
@@ -258,7 +259,7 @@ input[type="text"], input[type="email"] {
 
 input[type="submit"], .button {
     width: 50%;
-    margin: 0 ;
+    margin: 0;
     padding: 0 0.75em;
     background: none;
     border: solid 1px;
