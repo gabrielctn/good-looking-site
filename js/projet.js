@@ -1,11 +1,16 @@
 $(document).ready(function() {
-    $(".burger").on('click', function() {
+
+    /* Permet de fermer le menu en cliquant n'importe où sur la page */
+    $(document).on('click', hideMenu);
+
+    /* Actions sur le menu au click sur le burger */
+    $(".burger").on('click', function(e) {
         /* Si le menu est ouvert on le referme en lui donnant une largeur de 0px */
         if (document.getElementById("sideNav").style.width == "290px") {
-            document.getElementById("sideNav").style.width = "0";
-            document.getElementById("pegasus").style.color = "black";
-            $(".bar").css("background-color", "black");
+            hideMenu();
         } else {
+            /* Empêche la fermeture du menu avant son ouverture */
+            e.stopPropagation();
             /* Si le menu est fermé on l'ouvre en lui donnant une largeur de 290px */
             document.getElementById("sideNav").style.width = "290px";
             document.getElementById("pegasus").style.color = "white";
@@ -13,32 +18,52 @@ $(document).ready(function() {
         }
     });
 
+    /* Fonction qui s'assure que le nav du menu ne
+    se referme pas quand on clique dessus */
+    $("nav").on("click", function(e) {
+        /* Permet de ne pas croire qu'on clique sur le body,
+        et donc de ne pas fermer le menu */
+        e.stopPropagation();
+    })
+
     // Faire en sorte que le scroll quand on clique sur la
     // flèche de la 1ere flèche soit "smooth"
-    $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+    $('.js-scrollTo').on('click', function() { // Au clic sur la flèche
         var page = $(this).attr('href'); // Page cible
         var speed = 1500; // Durée de l'animation (en ms)
         $('html, body').animate({
             scrollTop: $(page).offset().top
-        }, speed); // Go
+        }, speed);
         return false;
     });
 });
 
 
+/* Ferme le menu */
+function hideMenu() {
+    /* Si le menu est ouvert on le referme en lui donnant une largeur de 0px */
+    document.getElementById("sideNav").style.width = "0";
+    document.getElementById("pegasus").style.color = "black";
+    $(".bar").css("background-color", "black");
+};
 
-// Create the parallax function.
+
+/* Fonction de parallax */
 function parallax() {
+    /* Diviser le "pageYOffset" par un nombre positif ralentira l'effet de parallax.
+    L'ajout d'un signe '-' avant (window.pageYOffset) fait bouger l'élément de parallax
+    vers le haut plutôt que vers le bas quand on scroll */
     if (document.getElementById('separator') != null) {
+        /* Condition nécessaire pour vérifier que la fonction s'applique
+        uniquement quand on est sur la page index.html car l'élément
+        séparateur n'existe que sur cette page */
         var separator = document.getElementById("separator");
-        // Dividing the pageYOffset by a positive number will slow down the parallax effect.
-        // Adding a '-' before (window.pageYOffset) makes the parallax
-        // layer move up instead of down when scrolling.
         separator.style.top = (window.pageYOffset / 13) + 'px';
     }
 }
-// Add an event listener which will detect scrolling and run
-// the parallax function.
+
+/* Ajoute un détecteur d'événement qui détecte le scroll
+ et actionne la fonction parallax */
 
 window.addEventListener("scroll", parallax);
 
@@ -52,15 +77,17 @@ function evaluateAnswer() {
     }
 }
 
-
+/* S'assure que le champs âge n'est pas vide */
 function checkAge() {
     return (document.formulaire.age.value != "");
 }
 
+/* S'assure qu'un sexe a bien été sélectionné */
 function checkSex() {
     return (document.formulaire.sexe[0].checked || document.formulaire.sexe[1].checked);
 }
 
+/* S'assure que le champs connaissance du site soit bien complété */
 function checkSite() {
     var inputElements = document.getElementsByName('connaissanceSite');
     for (var i = 0; i < inputElements.length; ++i) {
@@ -85,6 +112,7 @@ function checkSite() {
     return false;
 }
 
+/* Il faut qu'au moins une case soit cochée pour retourner true, sinon ça ne va pas */
 function checkPage() {
     var inputElements = document.getElementsByName('pageVisite');
     for (var i = 0; i < inputElements.length; ++i) {
