@@ -16,7 +16,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #1f2329;
     overflow-x: hidden;
     transition: 0.5s;
     /* 0.5 second effet de transition pour son apparition */
@@ -39,7 +39,7 @@ nav a {
     padding: 8px 8px 8px 32px;
     display: block;
     border: 0;
-    background-color: black;
+    background-color: #1f2329;
     text-align: justify;
     text-decoration: none;
     font-size: 25px;
@@ -70,7 +70,7 @@ nav .cv:hover {
     margin-top: 7px;
     margin-bottom: 7px;
     border-radius: 50px;
-    background: black;
+    background: #1f2329;
     transition: all .7s ease;
 }
 
@@ -110,7 +110,7 @@ nav .cv:hover {
     z-index: 2;
     font-family: 'Open Sans';
     font-size: 25.5pt;
-    color: black;
+    color: #1f2329;
     cursor: pointer;
 }
 
