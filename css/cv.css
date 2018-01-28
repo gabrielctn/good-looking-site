@@ -8,7 +8,7 @@
 
 html, body {
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 0;
     font-family: "Roboto";
     /* Cache le scroll horizontal */
     overflow-x: hidden;
@@ -26,7 +26,7 @@ body {
 
 /*Spécifique au HTML5*/
 
-section, article, aside, footer {
+section, aside, footer {
     /* Affiche les éléments en tant qu'élements "block" comme <p>.
     Ils commencent à une nouvelle ligne et prend toute la largeur de la page */
     display: block;
@@ -54,15 +54,15 @@ header {
     display: inline-block;
 }
 
-h3, span, .content article p {
+h3, span, .content section p {
     margin-left: 16%;
     margin-right: 2%;
 }
 
 hr {
     border: 1px solid #e4e4e4;
-    width: 82%;
-    margin: 4% 0 4% 18%;
+    width: 85%;
+    margin: 4% 0 4% 16%;
 }
 
 h1 {
@@ -79,7 +79,7 @@ h3 {
     line-height: 20pt;
 }
 
-article p {
+section p {
     font-weight: 300;
     font-size: 1rem;
     line-height: 20pt;
@@ -103,7 +103,7 @@ aside img {
 }
 
 aside p {
-    margin-left: 25%;
+    margin-left: 18%;
     margin-top: 0;
 }
 
@@ -371,17 +371,6 @@ ul.icons li {
     animation-name: fadeInDown;
 }
 
-@-webkit-keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translate3d(-100%, 0, 0);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
-
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -395,17 +384,6 @@ ul.icons li {
 
 .fadeInLeft {
     animation-name: fadeInLeft;
-}
-
-@-webkit-keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translate3d(100%, 0, 0);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
 }
 
 @keyframes fadeInRight {
@@ -491,7 +469,7 @@ aside {
     aside p {
         margin-left: 21%;
     }
-    article p {
+    section p {
         font-size: 1.6rem;
     }
     .small {
@@ -499,7 +477,6 @@ aside {
     }
     .lang {
         font-size: 1.3rem;
-        margin-left:
     }
     .progress {
         margin-left: 7rem;

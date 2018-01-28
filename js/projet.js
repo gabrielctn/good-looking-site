@@ -1,10 +1,19 @@
+/* Ferme le menu */
+function hideMenu() {
+    /* Si le menu est ouvert on le referme en lui donnant une largeur de 0px */
+    document.getElementById("sideNav").style.width = "0";
+    document.getElementById("pegasus").style.color = "black";
+    $(".bar").css("background-color", "black");
+}
+
+
 $(document).ready(function() {
 
     /* Permet de fermer le menu en cliquant n'importe où sur la page */
-    $(document).on('click', hideMenu);
+    $(document).on("click", hideMenu);
 
     /* Actions sur le menu au click sur le burger */
-    $(".burger").on('click', function(e) {
+    $(".burger").on("click", function(e) {
         /* Si le menu est ouvert on le referme en lui donnant une largeur de 0px */
         if (document.getElementById("sideNav").style.width == "290px") {
             hideMenu();
@@ -24,17 +33,11 @@ $(document).ready(function() {
         /* Permet de ne pas croire qu'on clique sur le body,
         et donc de ne pas fermer le menu */
         e.stopPropagation();
-    })
+    });
 });
 
 
-/* Ferme le menu */
-function hideMenu() {
-    /* Si le menu est ouvert on le referme en lui donnant une largeur de 0px */
-    document.getElementById("sideNav").style.width = "0";
-    document.getElementById("pegasus").style.color = "black";
-    $(".bar").css("background-color", "black");
-};
+
 
 
 /* Fonction de parallax */
@@ -42,12 +45,12 @@ function parallax() {
     /* Diviser le "pageYOffset" par un nombre positif ralentira l'effet de parallax.
     L'ajout d'un signe '-' avant (window.pageYOffset) fait bouger l'élément de parallax
     vers le haut plutôt que vers le bas quand on scroll */
-    if (document.getElementById('separator') != null) {
+    if (document.getElementById("separator") != null) {
         /* Condition nécessaire pour vérifier que la fonction s'applique
         uniquement quand on est sur la page index.html car l'élément
         séparateur n'existe que sur cette page */
         var separator = document.getElementById("separator");
-        separator.style.top = (window.pageYOffset / 7) + 'px';
+        separator.style.top = (window.pageYOffset / 7) + "px";
     }
 }
 
@@ -79,20 +82,20 @@ function checkSex() {
 
 /* S'assure que le champs connaissance du site soit bien complété */
 function checkSite() {
-    var inputElements = document.getElementsByName('connaissanceSite');
-    for (var i = 0; i < inputElements.length; ++i) {
+    var inputElements = document.getElementsByName("siteKnowledge");
+    for (var i = 0; i < inputElements.length; i += 1) {
         /* une radio a bien étée cochée */
         if (inputElements[i].checked) {
             /* s'il s'agit de la radio autre */
             if (inputElements[i].value == "autre") {
                 /* il faut que le champ texte à côté soit rempli */
-                if (document.formulaire.connaissanceSiteAutre.value != "") {
+                if (document.formulaire.siteKnowledgeOther.value != "") {
                     return true;
                 } else {
                     return false;
                 }
                 /* si ce n'est pas autre il faut que le champ texte soit vide */
-            } else if (document.formulaire.connaissanceSiteAutre.value == "") {
+            } else if (document.formulaire.siteKnowledgeOther.value == "") {
                 return true;
             } else {
                 return false;
@@ -104,8 +107,8 @@ function checkSite() {
 
 /* Il faut qu'au moins une case soit cochée pour retourner true, sinon ça ne va pas */
 function checkPage() {
-    var inputElements = document.getElementsByName('pageVisite');
-    for (var i = 0; i < inputElements.length; ++i) {
+    var inputElements = document.getElementsByName("visitedPage");
+    for (var i = 0; i < inputElements.length; i += 1) {
         if (inputElements[i].checked) {
             return true;
         }

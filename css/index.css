@@ -28,7 +28,6 @@ PEGASUS doivent rester en blanc, même si le menu est fermé */
     background-color: white !important;
 }
 
-
 /* nécessaire pour créer des niveaux d'index à l'intérieur de cette div
 le titre sera devant l'ombre lumineuse*/
 
@@ -55,6 +54,7 @@ le titre sera devant l'ombre lumineuse*/
 
 /* "::after" crée un pseudo-élément qui sera le dernier enfant
  de l'élément sélectionné*/
+
 #title h1::after {
     /* taille plus grande que 100% pour que l'ombre lumineuse dépasse
     de la boîte du titre de tous les côtés */
@@ -108,6 +108,7 @@ a {
 }
 
 /* Bande qui bouge sur la page principale */
+
 #separator {
     height: 150px;
     width: 100%;
@@ -186,8 +187,8 @@ a {
 /* Passage de la souris sur l'image */
 
 .container:hover .overlay {
-    opacity: 0.7;
     /* Rend le texte et l'image visible */
+    opacity: 0.7;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 1);
 }
 
@@ -242,7 +243,7 @@ input[type="text"], input[type="email"] {
     line-height: 1.5em;
 }
 
-/* Boutton formulaire */
+/* Boutton du formulaire */
 
 input[type="submit"], .button {
     width: 50%;
