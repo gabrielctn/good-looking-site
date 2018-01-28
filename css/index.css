@@ -250,8 +250,8 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     border: 2px solid #83d3c9;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
-    line-height: 1em;
+input[type="text"], input[type="email"] {
+    line-height: 1.5em;
 }
 
 /* Boutton formulaire */
