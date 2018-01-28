@@ -20,6 +20,7 @@ nav {
     left: 0;
     background-color: #1f2329;
     overflow-x: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     /* 0.5 seconde effet de transition pour son apparition */
 }
@@ -43,6 +44,7 @@ nav a {
     background-color: #1f2329;
     font-size: 25px;
     color: #999;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     display: block;
     text-align: justify;
@@ -72,6 +74,7 @@ nav .cv:hover {
     margin-bottom: 7px;
     border-radius: 50px;
     background: #1f2329;
+    -webkit-transition: all .7s ease;
     transition: all .7s ease;
     display: block;
 }
@@ -80,6 +83,7 @@ nav .cv:hover {
     z-index: 2;
     top: 5px;
     left: 20px;
+    -webkit-transition: all .7s ease;
     transition: all .7s ease;
     height: auto;
     width: auto;
@@ -93,10 +97,12 @@ nav .cv:hover {
 }
 
 .burger:hover .top {
+    -webkit-transform: translateY(10px) rotateZ(45deg);
     transform: translateY(10px) rotateZ(45deg);
 }
 
 .burger:hover .bottom {
+    -webkit-transform: translateY(-10px) rotateZ(-45deg);
     transform: translateY(-10px) rotateZ(-45deg);
 }
 
@@ -176,6 +182,7 @@ ul.copyright li {
     border-radius: 100%;
     font-size: 1.25em;
     line-height: 2.25em;
+    -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     display: inline-block;
     text-align: center;

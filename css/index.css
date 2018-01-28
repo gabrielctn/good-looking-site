@@ -1,4 +1,5 @@
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -49,6 +50,7 @@ le titre sera devant l'ombre lumineuse*/
     font-size: 4vw;
     font-weight: lighter;
     color: #252B37;
+    -webkit-animation: textColor 10s ease infinite;
     animation: textColor 10s ease infinite;
 }
 
@@ -66,16 +68,32 @@ le titre sera devant l'ombre lumineuse*/
     margin: 0 auto;
     z-index: -1;
     position: absolute;
+    background: -webkit-gradient(linear, right top, left top, from(#0fffc1), to(#7e0fff));
     background: linear-gradient(270deg, #0fffc1, #7e0fff);
     background-size: 200% 200%;
     /* il faut un content pour que l'ombre lumineuse s'affiche */
     content: "";
+    -webkit-transform: scale(0.75);
     transform: scale(0.75);
+    -webkit-filter: blur(3vw);
     filter: blur(3vw);
+    -webkit-animation: animateGlow 5s ease infinite;
     animation: animateGlow 5s ease infinite;
 }
 
 /* Les animations de gradient de couleur */
+
+@-webkit-keyframes animateGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 @keyframes animateGlow {
     0% {
@@ -86,6 +104,18 @@ le titre sera devant l'ombre lumineuse*/
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes textColor {
+    0% {
+        color: #7e0fff;
+    }
+    50% {
+        color: #0fffc1;
+    }
+    100% {
+        color: #7e0fff;
     }
 }
 
@@ -114,6 +144,7 @@ a {
     width: 100%;
     position: relative;
     background-image: url("../images/separator.jpg");
+    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 1);
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 1);
 }
 
@@ -141,14 +172,18 @@ a {
 }
 
 .container img {
+    -o-object-fit: cover;
     object-fit: cover;
     width: 100%;
     height: 250px;
 }
 
 .container:hover {
+    -webkit-box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1.01);
     transform: scale(1.01);
+    -webkit-transition: .2s ease;
     transition: .2s ease;
 }
 
@@ -166,6 +201,7 @@ a {
     width: 350px;
     /* rend le texte et le filtre invisible */
     opacity: 0;
+    -webkit-transition: .2s ease;
     transition: .2s ease;
     background-color: #1f2329;
     border-radius: 2px;
@@ -179,6 +215,7 @@ a {
     font-size: 3.5rem;
     color: white;
     margin: 0;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
     position: absolute;
@@ -189,6 +226,7 @@ a {
 .container:hover .overlay {
     /* Rend le texte et l'image visible */
     opacity: 0.7;
+    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 1);
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 1);
 }
 
@@ -217,6 +255,8 @@ form {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -224,11 +264,13 @@ input, textarea {
     width: 100%;
     margin: 0 2% 2% 2%;
     font-size: 1em;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: inherit;
 }
 
 input[type="text"], input[type="email"], textarea {
+    -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     background: none;
     border: solid 1px rgba(124, 128, 129, 0.2);
@@ -258,6 +300,7 @@ input[type="submit"], .button {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     cursor: pointer;
 }
