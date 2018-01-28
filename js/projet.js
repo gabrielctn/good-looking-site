@@ -34,6 +34,17 @@ $(document).ready(function() {
         et donc de ne pas fermer le menu */
         e.stopPropagation();
     });
+
+    /* Faire en sorte que le scroll quand on clique
+    sur le bouton principal soit "smooth" */
+    $(".scrollTo").on("click", function() { // Au clic sur un élément
+        var page = $(this).attr("href"); // Page cible
+        var speed = 950; // Durée de l'animation (en ms)
+        $("html, body").animate({
+            scrollTop: $(page).offset().top
+        }, speed); // Go
+        return false;
+    });
 });
 
 
@@ -50,7 +61,7 @@ function parallax() {
         uniquement quand on est sur la page index.html car l'élément
         séparateur n'existe que sur cette page */
         var separator = document.getElementById("separator");
-        separator.style.top = (window.pageYOffset / 7) + "px";
+        separator.style.top = (window.pageYOffset / 7.5) + "px";
     }
 }
 
