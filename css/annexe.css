@@ -4,54 +4,38 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
     font-size: 25.5pt;
+    text-decoration: none;
 }
 
 h1 {
     width: 100%;
     left: 0;
     top: 50%;
-    position: absolute;
     background-color: black;
     opacity: 0.85;
     font-size: 4em;
     letter-spacing: 10px;
-    text-align: center;
     color: white;
-}
-
-#bande_home {
-    height: 50px;
-    width: 100%;
-    top: 0;
-    position: fixed;
-    z-index: 1;
-    background-color: #d7d7d7;
-    box-shadow: 0 10px 30px black;
-}
-
-#bande_home h2 {
-    margin-top: -14px;
-    font-size: 4em;
-    text-align: right;
-    letter-spacing: 0.5em;
-    color: #484747;
+    position: absolute;
+    text-align: center;
 }
 
 h3 {
     letter-spacing: 5px;
-    text-transform: uppercase;
     color: #111;
+    text-transform: uppercase;
 }
 
 article {
-    position: relative;
     padding: 40px 15%;
     font-size: 1.5em;
-    text-align: justify;
     box-shadow: 20px 20px 30px black;
+    position: relative;
+    text-align: justify;
 }
+
+/* Pour un DOM article sur 2 le style change */
 
 article:nth-of-type(2n+1) {
     background-color: white;
@@ -61,6 +45,13 @@ article:nth-of-type(2n+1) {
 article:nth-of-type(2n) {
     background-color: #7b7b7b;
     color: white;
+}
+
+video {
+    position: relative;
+    width: 100%;
+    /* enlever espace sous la vidéo */
+    display: block;
 }
 
 .img1, .bgimg {
@@ -81,17 +72,29 @@ article:nth-of-type(2n) {
     width: 100%;
 }
 
-video {
-    position: relative;
+#page_header_title {
+    height: 50px;
     width: 100%;
-    /* enlever espace sous la vidéo */
-    display: block;
+    top: 0;
+    box-shadow: 0 10px 30px black;
+    background-color: #d7d7d7;
+    z-index: 1;
+    position: fixed;
 }
 
-/*Responsive: pour les fenêtres ayant une largeur inférieure à 1000px, le titre dans le bandeau est enlevé */
+#page_header_title h2 {
+    margin-top: -14px;
+    font-size: 4em;
+    text-align: right;
+    letter-spacing: 0.5em;
+    color: #484747;
+}
+
+/*Responsive: pour les fenêtres ayant une largeur inférieure à 1000px
+le titre dans le bandeau est enlevé */
 
 @media (max-width:1000px) {
-    #bande_home h2 {
+    #page_header_title h2 {
         visibility: hidden;
     }
 }

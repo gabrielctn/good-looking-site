@@ -1,7 +1,9 @@
 body, html {
     height: 100%;
     margin: 0;
-    padding:0;
+    padding: 0;
+    /* Plusieurs familles de polices au cas où le navigateur
+     ne trouve pas les premières, il peut en utiliser une au moins sans-serif */
     font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
 }
 
@@ -19,33 +21,33 @@ nav {
     background-color: #1f2329;
     overflow-x: hidden;
     transition: 0.5s;
-    /* 0.5 second effet de transition pour son apparition */
+    /* 0.5 seconde effet de transition pour son apparition */
 }
 
 nav p {
     width: 100%;
     padding: 8px 8px 0px 32px;
-    display: block;
-    text-align: justify;
     font-size: 25px;
     font-weight: 900;
+    display: block;
+    text-align: justify;
     color: #23a6c9;
 }
 
-/* Les liens de la naviguation */
+/* Les liens de navigation */
 
 nav a {
     width: 100%;
     padding: 8px 8px 8px 32px;
-    display: block;
     border: 0;
     background-color: #1f2329;
-    text-align: justify;
-    text-decoration: none;
     font-size: 25px;
     color: #999;
-    white-space: nowrap;
     transition: 0.3s;
+    display: block;
+    text-align: justify;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -61,29 +63,29 @@ nav .cv:hover {
     color: white;
 }
 
-/* Burger */
+/* Burger, il permet d'ouvrir le menu  */
 
 .bar {
     height: 3px;
     width: 30px;
-    display: block;
     margin-top: 7px;
     margin-bottom: 7px;
     border-radius: 50px;
     background: #1f2329;
     transition: all .7s ease;
+    display: block;
 }
 
 .burger {
-    height: auto;
-    width: auto;
     z-index: 2;
-    position: fixed;
     top: 5px;
     left: 20px;
+    transition: all .7s ease;
+    height: auto;
+    width: auto;
+    position: fixed;
     display: inline-block;
     cursor: pointer;
-    transition: all .7s ease;
 }
 
 .middle {
@@ -114,7 +116,6 @@ nav .cv:hover {
     cursor: pointer;
 }
 
-
 footer {
     padding: 5em;
     background: #1f2329;
@@ -127,7 +128,8 @@ footer .copyright {
     line-height: 1em;
 }
 
-/* Icône */
+/* Icônes */
+
 ul {
     margin: 0 0 2em 0;
     margin: 0;
@@ -144,16 +146,16 @@ ul.icons {
 }
 
 ul.icons li {
-    display: inline-block;
     line-height: 1em;
     padding-left: 0.5em;
+    display: inline-block;
 }
 
 ul.copyright li {
-    display: inline-block;
     line-height: 1em;
     padding-left: 0.5em;
     padding-top: 1em;
+    display: inline-block;
 }
 
 .icon.circle.fa-twitter {
@@ -172,12 +174,12 @@ ul.copyright li {
     top: 0;
     border: 0;
     border-radius: 100%;
-    display: inline-block;
     font-size: 1.25em;
     line-height: 2.25em;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
     text-align: center;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
 }
 
 .icon {
@@ -230,8 +232,8 @@ ul.copyright li {
     color: #999;
 }
 
-
-/* Responsive: pour les plus petites fenêtres inférieures à 450px, la naviguation latérale à un padding-top et une écriture plus petite */
+/* Responsive: pour les plus petites fenêtres inférieures à 450px,
+la naviguation latérale a un padding-top et une écriture plus petite */
 
 @media screen and (max-height: 450px) {
     .sidenav {

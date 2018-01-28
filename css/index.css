@@ -13,19 +13,21 @@ header {
     height: 100%;
 }
 
-/* utilisation de important pour signifier que sur cette page le menu et PEGASUS doivent rester en blanc, même le menu fermé */
+/* utilisation de "important" pour signifier que sur cette page le menu et
+PEGASUS doivent rester en blanc, même si le menu est fermé */
 
 #pegasus {
     color: white !important;
+}
+
+#head-page {
+    background-size: cover;
 }
 
 .bar {
     background-color: white !important;
 }
 
-#head-page {
-    background-size: cover;
-}
 
 /* nécessaire pour créer des niveaux d'index à l'intérieur de cette div
 le titre sera devant l'ombre lumineuse*/
@@ -51,8 +53,11 @@ le titre sera devant l'ombre lumineuse*/
     animation: textColor 10s ease infinite;
 }
 
+/* "::after" crée un pseudo-élément qui sera le dernier enfant
+ de l'élément sélectionné*/
 #title h1::after {
-    /* taille plus grande que 100% pour que l'ombre lumineuse dépasse de la boîte du titre de tous les côtés */
+    /* taille plus grande que 100% pour que l'ombre lumineuse dépasse
+    de la boîte du titre de tous les côtés */
     height: 130%;
     width: 135%;
     top: -15%;
@@ -102,6 +107,7 @@ a {
     color: white;
 }
 
+/* Bande qui bouge sur la page principale */
 #separator {
     height: 150px;
     width: 100%;
