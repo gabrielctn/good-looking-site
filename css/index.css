@@ -95,9 +95,10 @@ le titre sera devant l'ombre lumineuse*/
 }
 
 #arrow {
-    left: 45%;
     top: 90%;
-    position: absolute;
+    width: 100%;
+    position: relative;
+    text-align: center;
 }
 
 #arrow:hover {
