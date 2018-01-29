@@ -41,8 +41,8 @@ header {
 }
 
 .content .section1 {
-    min-height: 760px;
-    max-height: 1225px;
+    min-height: 900px;
+    max-height: 1050px;
 }
 
 .content header {
@@ -91,7 +91,8 @@ aside {
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     width: 25%;
-    max-height: 1225px;
+    min-height: 920px;
+    max-height: 1050px;
     background-color: #5DA4D9;
     margin-left: 3.75%;
     float: left;
