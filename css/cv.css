@@ -169,8 +169,9 @@ footer {
 
 .content span {
     margin-top: 0px;
+    display: block;
     font-size: 1rem;
-    line-height: 1;
+    line-height: 1.5;
     color: #5da4d9;
 }
 
