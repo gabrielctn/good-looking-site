@@ -40,9 +40,7 @@ header {
     display: inline-block;
 }
 
-.content .section1 {
-    max-height: 1120px;
-}
+
 
 .content header {
     margin: 0 auto;
@@ -85,12 +83,16 @@ section p {
     line-height: 2;
 }
 
+.content .section1 {
+    height: 73rem;
+}
+
 aside {
     /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     width: 25%;
-    min-height: 1120px;
+    height: 73rem;
     background-color: #5DA4D9;
     margin-left: 3.75%;
     float: left;
@@ -99,7 +101,7 @@ aside {
 aside img {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 350px;
 }
 
 aside p {
@@ -522,11 +524,14 @@ aside {
         float: left;
         margin: 0;
     }
+    .content .section1{
+        height: 90rem;
+    }
     .category {
         margin-bottom: -24px;
     }
     aside {
-      min-height: 820px;
+      height: 95rem;
     }
     aside section h2 {
         font-size: 2rem;
